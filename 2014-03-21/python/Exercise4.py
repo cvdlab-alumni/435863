@@ -4,6 +4,10 @@ Created on 22/mar/2014
 @author: Salvati Danilo
 '''
 from pyplasm import *
+
+
+# Aggiungo una scala al modello 3D
+
 # Non riutilizzo completamente tutte le strutture dell'esercizio 2 per sfruttare meglio la simmetria dell'edificio
 
 # Definisco le misure dell'edificio
@@ -138,4 +142,17 @@ castle = COLOR (CASTLE_COLOR) (STRUCT([external_building, internal_building, tow
 # Genero il modello finale tridimensionale
 solid_model_3D = STRUCT ([door, window, castle])
 
-VIEW (solid_model_3D)
+dom2D = PROD([INTERVALS(0.5)(1), INTERVALS(4)(1)])
+
+dom3D_0 = T (1) (-4) (PROD([PROD([INTERVALS(4)(1), INTERVALS(4)(1)]), Q(1.2)]))
+dom3D_1 = PROD([dom2D, Q(1.2)])
+dom3D_2 = T(1) (0.5) (PROD([dom2D, Q(0.8)]))
+dom3D_3 = T(1) (1) (PROD([dom2D, Q(0.4)]))
+
+dom3D = STRUCT([dom3D_0,dom3D_1, dom3D_2, dom3D_3])
+
+dom3D = T ([1, 2,3]) ([18.70, 4.8,-0.6]) (dom3D)
+
+VIEW(STRUCT([dom3D, solid_model_3D]))
+
+# VIEW (solid_model_3D)
