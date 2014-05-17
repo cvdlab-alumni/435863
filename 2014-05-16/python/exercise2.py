@@ -3,7 +3,7 @@ Created on 17/mag/2014
 
 @author: Salvati Danilo
 '''
-from pyplasm import BEZIER, S1, S2, CUBOID, STRUCT, T, RED;
+from pyplasm import BEZIER, S1, S2;
 from mapper import larScale, larTranslate, larMap, larDomain
 from exercise1 import house, DRAW, height, addToModelList, wall_thickness
 from architectural import spiralStair
@@ -11,8 +11,6 @@ from largrid import larModelProduct
 from sysml import assemblyDiagramInit
 from exercise3 import merging_numbering_elimination
 
-from lar2psm import MKPOLS
-from pyplasm.fenvs import DIFFERENCE, VIEW, COLOR
 
 
 ##############################################################################
