@@ -87,14 +87,14 @@ diagram = assemblyDiagramInit(shape)(sizePatterns);
 living_room = merging_numbering_elimination(living_room)(diagram)(31)([37, 38, 39]);
 
 shape = [5, 1, 3];
-sizePatterns = [[0.75 + wall_thickness, 0.80, 0.45, 1.0, 0.75], [wall_thickness], [1.5, height - 2, 0.5]];
+sizePatterns = [[0.75 + wall_thickness, 0.80, 0.45, 1.0, 0.75], [wall_thickness], [1.0, height - 1.5, 0.5]];
 diagram = assemblyDiagramInit(shape)(sizePatterns);
 
 # Creo la finestra
 living_room = merging_numbering_elimination(living_room)(diagram)(13)([42, 43, 49]);
 
 shape = [1, 5, 3];
-sizePatterns = [[wall_thickness], [1.37 + wall_thickness, 1.0, 0.25, 1.0, 1.38], [1.5, height - 2, 0.5]];
+sizePatterns = [[wall_thickness], [1.37 + wall_thickness, 1.0, 0.25, 1.0, 1.38], [1.0, height - 1.5, 0.5]];
 diagram = assemblyDiagramInit(shape)(sizePatterns);
 
 # Creo un'altra finestra
@@ -175,7 +175,7 @@ diagram = assemblyDiagramInit(shape)(sizePatterns);
 bedroom1 = merging_numbering_elimination(bedroom1)(diagram)(20)([27, 28]);
 
 shape = [3, 1, 3];
-sizePatterns = [[1.7 + wall_thickness, 1.0, 1.7], [wall_thickness], [1.5, height - 2, 0.5]];
+sizePatterns = [[1.7 + wall_thickness, 1.0, 1.7], [wall_thickness], [1.0, height - 1.5, 0.5]];
 diagram = assemblyDiagramInit(shape)(sizePatterns);
 
 # Creo la finestra
@@ -183,11 +183,11 @@ bedroom1 = merging_numbering_elimination(bedroom1)(diagram)(14)([34]);
 
 
 shape = [1, 5, 3];
-sizePatterns = [[wall_thickness], [1.0 + wall_thickness, 0.75, 0.50, 1.0, 1.25], [1.5, height - 2, 0.5]];
+sizePatterns = [[wall_thickness], [1.0 + wall_thickness, 0.75, 0.50, 1.0, 1.25], [1.0, height - 1.5, 0.5]];
 diagram = assemblyDiagramInit(shape)(sizePatterns);
 
 # Creo un'altra finestra
-bedroom1 = merging_numbering_elimination(bedroom1)(diagram)(4)([41,46, 47]);
+bedroom1 = merging_numbering_elimination(bedroom1)(diagram)(4)([41, 46, 47]);
 
 V, CV = bedroom1;
 
@@ -217,7 +217,7 @@ diagram = assemblyDiagramInit(shape)(sizePatterns);
 bedroom2 = merging_numbering_elimination(bedroom2)(diagram)(4)([27, 28]);
 
 shape = [3, 1, 3];
-sizePatterns = [[1.55 + wall_thickness, 1.0, 1.55], [wall_thickness], [1.5, height - 2, 0.5]];
+sizePatterns = [[1.55 + wall_thickness, 1.0, 1.55], [wall_thickness], [1.0, height - 1.5, 0.5]];
 diagram = assemblyDiagramInit(shape)(sizePatterns);
 
 # Creo la finestra
