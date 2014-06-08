@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Homework 4</title>
+	<style>
+	body {
+		margin: 0;
+		overflow: hidden;
+	}
+	</style>
+</head>
+<body>
+	<!-- JavaScript libraries -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/three.js/r67/three.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/stats.js/r11/Stats.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js"></script>
+	<script src="TrackballControls.js"></script>
+	<script src="tween.min.js"></script>
+	<script src="keyframe.js"></script>
+	<script type="text/javascript" src="helvetiker_regular.typeface.js"></script>
+	<script src="lamp.js"></script>
+	<script src="animation.js"></script>
+
+	<!-- Javascript code that runs our Three.js examples -->
+	<script>
+	$(function() {
+
+		var showAxisHelper = false; // Visualizzo gli assi cartesiani
+		var updateTrackBallControl = false; // Abilito o disabilito il trackBallControl
+		var lightOn = true; // Accendo o spengo la luce
+
+		var length_basement = 100;
+		var width_basement = 120; // Dimensioni del piano di base
+
+		var x_lamp = 0.47;
+		var y_lamp = 0.47; // Posizione della lampada
+
+		var r_ball = 3; // Raggio della palla
+		var x_ball = 20;
+		var y_ball = 5;
+		var z_ball = r_ball/2-0.5; // Posizione della palla
+
+		var length_cube = 4;
+		var width_cube = length_cube;
+		var height_cube = length_cube; // Dimensioni del cubo
+
+		var x_cube = -7;
+		var y_cube = 40;
+		var z_cube = 0; // Posizione del cubo
+
+		var basement_color = 0xBF6430; // Colore del piano di base
+		var directionaLight_color = 0xffffff;
+		var ball_color = 0xFF0000; // Colore della palla
+		var cube_color = 0x0000FF; // Colore del cubo
+
+		// create a scene, that will hold all our elements such as objects, cameras and lights.
+		var scene = new THREE.Scene();
+
+		// create a camera, which defines where we're looking at.
+		var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+		// create a render and set the size
+		var renderer = new THREE.WebGLRenderer();
+		renderer.setClearColor(new THREE.Color(0xEEEEEE, 1.0));
+		renderer.setSize(window.innerWidth, window.innerHeight);
+		renderer.shadowMapEnabled = true;
+		// create trackball controls
+		var trackballControls = new THREE.TrackballControls(camera);
+
+
+		// Per prima cosa creo la mia lampada
+		var lamp = create_lamp();
+		scene.add(lamp);
+
+		// Definisco il piano su cui poggia la lampada 
+		var basementGeometry = new THREE.PlaneGeometry(length_basement, width_basement, 100, 100);
+		var basement = new THREE.Mesh(basementGeometry, new THREE.MeshLambertMaterial({
+			color : basement_color,
+			side: THREE.DoubleSide
+		}));
+		basement.position.z = -lamp.r_sphere-lamp.height_base/2;
+		basement.receiveShadow = true;
+		scene.add(basement);
+
+
+		/* Aggiungo alcuni elementi nella scena */
+
+		/* Aggiungo una palla */
+		var ballGeometry = new THREE.SphereGeometry(r_ball);
+		var ball = new THREE.Mesh(ballGeometry, new THREE.MeshPhongMaterial({
+			color : ball_color
+		}));
+		ball.receiveShadow = true;
+		ball.castShadow = true;
+		ball.position.x = x_ball;
+		ball.position.y  = y_ball;
+		ball.position.z = z_ball;
+		scene.add(ball);
+
+		/* Aggiungo un cubo */
+		var cubeGeometry = new THREE.BoxGeometry(length_cube,width_cube,height_cube,50,50,50);
+		var cube = new THREE.Mesh(cubeGeometry, new THREE.MeshPhongMaterial({
+			color : cube_color
+		}));
+		cube.receiveShadow = true;
+		cube.castShadow = true;
+		cube.position.x = x_cube;
+		cube.position.y  = y_cube;
+		cube.position.z = z_cube;
+		scene.add(cube);
+
+		/* Illumino la scena con una directionalLight */
+		var directionalLight = new THREE.DirectionalLight(directionaLight_color);
+		directionalLight.position.set(0, 0, 100);
+		directionalLight.intensity = .5;
+		directionalLight.castShadow = true;
+		directionalLight.shadowCameraNear = 2;
+		directionalLight.shadowCameraFar = 200;
+		directionalLight.shadowCameraLeft = -length_basement/2;
+		directionalLight.shadowCameraRight = length_basement/2;
+		directionalLight.shadowCameraTop = width_basement/2;
+		directionalLight.shadowCameraBottom = -width_basement/2;
+		directionalLight.shadowMapWidth = 2048;
+		directionalLight.shadowMapHeight = 2048;
+		scene.add(directionalLight);
+
+
+		// Aggiungo l'axis helper
+		var axisHelper = new THREE.AxisHelper(3);
+		axisHelper.visible = showAxisHelper;
+		scene.add(axisHelper);
+
+		/* Imposto la posizione della camera */
+		camera.position.set(-100, 20, 30);
+		camera.up = new THREE.Vector3(0, 0, 1);
+		camera.lookAt(scene.position);
+
+		$('body').append(renderer.domElement);
+
+		var controls = new function () {
+			this.alpha = lamp.alpha;
+			this.beta = lamp.beta;
+			this.gamma = lamp.gamma;
+			this.delta = lamp.delta;
+			this.epsilon = lamp.epsilon;
+
+			this.lightOn = lightOn;
+			this.showAxisHelper = showAxisHelper;
+			this.trackBallControl = updateTrackBallControl;
+
+			this.x_lamp = x_lamp;
+			this.y_lamp = y_lamp;
+		};
+
+		// Aggiungo il widget dei controlli alla pagina
+		var gui = new dat.GUI();
+
+		/* Aggiungo i vari controlli */
+
+		var anglesFolder = gui.addFolder("Angles");
+		anglesFolder.add(controls, 'alpha', 0, 2 * Math.PI).onChange(function(e) {
+			lamp.pivot.rotation.z = e;
+		});
+		
+		anglesFolder.add(controls, 'beta', 0, Math.PI/2).onChange(function(e) {
+			lamp.pivot.rotation.x = e;
+		});
+
+		anglesFolder.add(controls, 'gamma', 0, Math.PI/2).onChange(function(e) {
+			lamp.pivot2.rotation.x = e;
+		});
+
+		anglesFolder.add(controls, 'delta', 0, 2 * Math.PI).onChange(function(e) {
+			lamp.pivot2.rotation.z = e;
+		});
+
+		anglesFolder.add(controls, 'epsilon', 0, Math.PI/2).onChange(function(e) {
+			lamp.pivot3.rotation.x = e;
+		});
+
+		var lampPositionFolder = gui.addFolder("Lamp Position");
+		lampPositionFolder.add(controls,'x_lamp',0,1);
+		lampPositionFolder.add(controls,'y_lamp',0,1);
+
+		var debugFolder = gui.addFolder("Debug Options");
+		var axisControl = debugFolder.add(controls, 'showAxisHelper');
+		var trackBallControl = debugFolder.add(controls, 'trackBallControl');
+		var lightControl = debugFolder.add(controls, 'lightOn');
+
+		axisControl.onChange(function(value) {
+			axisHelper.visible = value;
+		});
+
+		trackBallControl.onChange(function(value) {
+			updateTrackBallControl = value;
+		});
+
+		lightControl.onChange(function(value) {
+			lightOn = value;
+		});
+
+		/* Definisco gli oggetti che non voglio visualizzare durante l'animazione */
+		var toHide = new THREE.Object3D();
+		toHide.add(lamp);
+		toHide.add(cube);
+		toHide.add(ball);
+		scene.add(toHide);
+
+		/* Creo l'animazione (vedi animation.js) */
+		var animator = create_animation(scene, toHide);
+		render();
+		animator.start();
+
+		function render() {
+
+			/* Verifico che l'utente voglia utilizzare il controller */
+			trackballControls.enabled = updateTrackBallControl;
+			trackballControls.update();
+			
+			/* Traslo la lampada in base ai parametri forniti dal controller */
+			lamp.position.x = controls.x_lamp * length_basement - (length_basement / 2 - (Math.pow(-1.0,Math.round(controls.x_lamp))) * lamp.length_base/2);
+			lamp.position.y = controls.y_lamp * width_basement - (width_basement / 2 - (Math.pow(-1.0,Math.round(controls.y_lamp))) * lamp.width_base/2);
+
+			/* Aggiorno l'animazione */
+			KF.update();
+
+			/* Accendo o spengo la luce */
+			if(!lightOn) {
+				lamp.spotLight.intensity = 0;
+				lamp.pointLight.intensity = 0;
+				lamp.spotLight.castShadow = false;
+			} else {
+				lamp.spotLight.intensity = lamp.spotLightIntensity;
+				lamp.pointLight.intensity = lamp.pointLightIntensity;
+				lamp.spotLight.castShadow = true;
+			}
+
+			// render using requestAnimationFrame
+			requestAnimationFrame(render);
+			renderer.render(scene, camera);
+		}
+
+	});
+</script>
+</body>
+</html>
