@@ -132,7 +132,7 @@ function create_animation(scene,toHide) {
 	// Definisco le animazioni utilizzando i KeyFrames
 	var animator = null;
  	var duration = 16; // sec
-	var loopAnimation = false;
+ 	var loopAnimation = false;
 
 
 
@@ -162,6 +162,18 @@ function create_animation(scene,toHide) {
 				],
 				target: lamp.position
 			},
+			/* Ruoto la lampada durante il primo salto */
+			{
+				keys:[0,.04,.0625,.066, 0.125],
+				values:[
+				{x: initialBeta + 0.2},
+				{x: initialBeta + 0.4},
+				{x: initialBeta + 0.1},
+				{x: initialBeta - 0.1},
+				{x: initialBeta},
+				],
+				target: lamp.pivot.rotation
+			},
 			/* Secondo salto */
 			{
 				keys:[0.15,0.1875,0.19, 0.25],
@@ -172,6 +184,18 @@ function create_animation(scene,toHide) {
 				{ z : lampZ, y: lampY - 4 * jumpLength},
 				],
 				target: lamp.position
+			},
+			/* Ruoto la lampada durante il secondo salto */
+			{
+				keys:[0.14,0.17,0.20, 0.25],
+				values:[
+				{x: initialBeta + 0.1},
+				{x: initialBeta + 0.4},
+				{x: initialBeta + 0.2},
+				{x: initialBeta - 0.2},
+				{x: initialBeta},
+				],
+				target: lamp.pivot.rotation
 			},
 			/* Salto sulla lettera */
 			{
@@ -258,7 +282,7 @@ function create_animation(scene,toHide) {
 			{
 				keys:[0],
 				values:[
-				{ y : 600},
+				{ y : 6000},
 				],
 				target: toHide.position
 			},
@@ -274,8 +298,8 @@ function create_animation(scene,toHide) {
 			duration: duration * 1000,
 			easing: TWEEN.Easing.Linear.None
 		});
-	}
-	buildAnimations();
-	return animator;
+}
+buildAnimations();
+return animator;
 
 }

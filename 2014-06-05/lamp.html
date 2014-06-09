@@ -47,7 +47,7 @@
 
 		var x_cube = -7;
 		var y_cube = 40;
-		var z_cube = 0; // Posizione del cubo
+		var z_cube = -0.2; // Posizione del cubo
 
 		var basement_color = 0xBF6430; // Colore del piano di base
 		var directionaLight_color = 0xffffff;
@@ -113,7 +113,7 @@
 		/* Illumino la scena con una directionalLight */
 		var directionalLight = new THREE.DirectionalLight(directionaLight_color);
 		directionalLight.position.set(0, 0, 100);
-		directionalLight.intensity = .5;
+		directionalLight.intensity = .65;
 		directionalLight.castShadow = true;
 		directionalLight.shadowCameraNear = 2;
 		directionalLight.shadowCameraFar = 200;
