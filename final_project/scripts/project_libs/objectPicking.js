@@ -53,8 +53,6 @@ function applyInteract(object, interactFunction) {
 	object.traverse( function ( child ) {
         if ( child instanceof THREE.Mesh ) {
           child.interact = interactFunction;
-        } else if (child instanceof THREE.Object3D) {
-        	//applyInteract(child, interactFunction);
         }
       });
 
