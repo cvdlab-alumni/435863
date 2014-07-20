@@ -1,0 +1,50 @@
+# Blender MTL File: 'KitchenTable.blend'
+# Material Count: 5
+
+newmtl AppleMaterial
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.523077 0.000000 0.000000
+Ks 0.483051 0.483051 0.483051
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Fruttiera
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.190884 0.349348 0.640000
+Ks 0.500000 0.500000 0.500000
+Ni 1.000000
+d 0.500000
+illum 2
+
+newmtl LegnoSedia
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.083333 0.083333 0.083333
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd ../../images/textures/kitchen/KitchenTableWood.jpg
+
+newmtl Table
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd ../../images/textures/kitchen/KitchenTableWood.jpg
+
+newmtl TessutoSedia
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd ../../images/textures/kitchen/TessutoSedia.jpg

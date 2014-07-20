@@ -1,0 +1,22 @@
+# Blender MTL File: 'Desktop.blend'
+# Material Count: 2
+
+newmtl 781029j19u
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.683922 0.693333 0.693333
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd ../../images/textures/bathroom/wood_18_diffuse.jpg
+
+newmtl 781029j19u.001
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.683922 0.693333 0.693333
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd ../../images/textures/bathroom/wood_18_diffuse.jpg

@@ -1,0 +1,20 @@
+# Blender MTL File: 'KitchenSink.blend'
+# Material Count: 2
+
+newmtl aluminium_03
+Ka  0.0 0.0 0.0
+Kd  0.5 0.5 0.5
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl metal_anisotropy_x_01
+Ka  0.0 0.0 0.0
+Kd  0.3 0.3 0.3
+Ks  1.0 1.0 1.0
+d  1.0
+Ns  10.0
+illum 2
+#
+# EOF

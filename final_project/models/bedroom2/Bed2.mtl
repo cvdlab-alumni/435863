@@ -1,0 +1,61 @@
+# Blender MTL File: 'Bed2.blend'
+# Material Count: 6
+
+newmtl Material
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd ../../images/textures/bathroom/wood_18_diffuse.jpg
+
+newmtl Material.001
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd ../../images/textures/bedroom1/TextureBed1.JPG
+
+newmtl Material.001_NONE
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd ../../images/textures/bedroom1/TextureBed1.JPG
+
+newmtl Material.002
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.642551 0.651234 0.651234
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd ../../images/textures/bedroom1/TextureBed1.JPG
+
+newmtl Material.003
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.633155 0.640000 0.456782
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+
+newmtl Material_NONE
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd ../../images/textures/bathroom/wood_18_diffuse.jpg

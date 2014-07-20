@@ -1,0 +1,321 @@
+# Max2Mtl Version 4.0 Mar 10th, 2001
+#
+newmtl 01_-_Default
+Ka  0.0 0.0 0.0
+Kd  0.9 0.9 0.9
+Ks  0.1 0.1 0.1
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl 01_-_Default2
+Ka  0.0 0.0 0.0
+Kd  0.6 0.4 0.8
+Ks  0.1 0.1 0.1
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl Arch_44__030_5
+Ka  0.0 0.0 0.0
+Kd  0.5 0.5 0.5
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  10.0
+illum 2
+map_Kd ../../images/textures/kitchen/Arch_044__030_bread_5.jpg
+#
+newmtl Arch_44__030_3
+Ka  0.0 0.0 0.0
+Kd  0.5 0.5 0.5
+Ks  0.1 0.1 0.1
+d  1.0
+Ns  10.0
+illum 2
+map_Kd ../../images/textures/kitchen/Arch_044__030_bread_1.jpg
+#
+newmtl Arch_44__030_2
+Ka  0.0 0.0 0.0
+Kd  0.5 0.5 0.5
+Ks  0.1 0.1 0.1
+d  1.0
+Ns  10.0
+illum 2
+map_Kd ../../images/textures/kitchen/Arch_044__030_bread_2.jpg
+#
+newmtl cloth_066
+Ka  0.0 0.0 0.0
+Kd  0.5 0.7 1.0
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  10.0
+illum 2
+map_Kd ../../images/textures/kitchen/cloth_46.jpg
+#
+newmtl simple_metal_0_70
+Ka  0.0 0.0 0.0
+Kd  0.3 0.3 0.3
+Ks  1.0 1.0 1.0
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl metal
+Ka  0.0 0.0 0.0
+Kd  0.1 0.1 0.1
+Ks  0.8 0.8 0.8
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl derevo
+Ka  0.0 0.0 0.0
+Kd  0.5 0.5 0.5
+Ks  0.1 0.1 0.1
+d  1.0
+Ns  10.0
+illum 2
+#
+# Multi/Sub Material__364 (2) to come 
+#
+newmtl Metal_Gold
+Ka  0.0 0.0 0.0
+Kd  0.0 0.0 0.0
+Ks  0.7 0.5 0.3
+d  1.0
+Ns  10.0
+illum 2
+#
+#
+newmtl Metal_Gold.002
+Ka  0.0 0.0 0.0
+Kd  0.0 0.0 0.0
+Ks  0.7 0.5 0.3
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl 08_-_Default
+Ka  0.0 0.0 0.0
+Kd  0.9 0.9 0.9
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  10.0
+illum 2
+#
+# Multi/Sub Material__364 done 
+#
+# Multi/Sub Material__412 (2) to come 
+#
+newmtl derevo
+Ka  0.0 0.0 0.0
+Kd  0.5 0.5 0.5
+Ks  0.1 0.1 0.1
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl Glass_Saluto
+Ka  0.0 0.0 0.0
+Kd  0.0 0.0 0.0
+Ks  1.0 1.0 1.0
+d  0.3
+Ns  10.0
+illum 2
+#
+# Multi/Sub Material__412 done 
+#
+# Multi/Sub Material__401 (2) to come 
+#
+newmtl derevo
+Ka  0.0 0.0 0.0
+Kd  0.5 0.5 0.5
+Ks  0.1 0.1 0.1
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl Glass_Saluto
+Ka  0.0 0.0 0.0
+Kd  0.0 0.0 0.0
+Ks  1.0 1.0 1.0
+d  0.3
+Ns  10.0
+illum 2
+#
+# Multi/Sub Material__401 done 
+#
+# Multi/Sub Material__434 (2) to come 
+#
+newmtl derevo
+Ka  0.0 0.0 0.0
+Kd  0.5 0.5 0.5
+Ks  0.1 0.1 0.1
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl Glass_Saluto
+Ka  0.0 0.0 0.0
+Kd  0.0 0.0 0.0
+Ks  1.0 1.0 1.0
+d  0.3
+Ns  10.0
+illum 2
+#
+# Multi/Sub Material__434 done 
+#
+newmtl plastic2
+Ka  0.0 0.0 0.0
+Kd  0.9 0.8 0.8
+Ks  0.1 0.1 0.1
+d  1.0
+Ns  10.0
+illum 2
+#
+# Multi/Sub Material__423 (2) to come 
+#
+newmtl derevo
+Ka  0.0 0.0 0.0
+Kd  0.5 0.5 0.5
+Ks  0.1 0.1 0.1
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl Glass_Saluto
+Ka  0.0 0.0 0.0
+Kd  0.0 0.0 0.0
+Ks  1.0 1.0 1.0
+d  0.3
+Ns  10.0
+illum 2
+#
+# Multi/Sub Material__423 done 
+#
+# Multi/Sub Material__328 (2) to come 
+#
+newmtl plastic
+Ka  0.0 0.0 0.0
+Kd  1.0 0.9 0.9
+Ks  0.1 0.1 0.1
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl derevo
+Ka  0.0 0.0 0.0
+Kd  0.5 0.5 0.5
+Ks  0.1 0.1 0.1
+d  1.0
+Ns  10.0
+illum 2
+map_Kd ../../images/textures/kitchen/dub-svetliy.png
+#
+# Multi/Sub Material__328 done 
+#
+newmtl 07_-_Default
+Ka  0.0 0.0 0.0
+Kd  0.5 0.5 0.5
+Ks  0.1 0.1 0.1
+d  1.0
+Ns  10.0
+illum 2
+#
+# Multi/Sub Material__11 (2) to come 
+#
+newmtl gelezo2
+Ka  0.0 0.0 0.0
+Kd  0.7 0.7 0.7
+Ks  0.7 0.7 0.7
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl plitaerh
+Ka  0.0 0.0 0.0
+Kd  0.5 0.5 0.5
+Ks  0.2 0.2 0.2
+d  1.0
+Ns  10.0
+illum 2
+#
+# Multi/Sub Material__11 done 
+#
+# Multi/Sub Material__129 (7) to come 
+#
+newmtl black
+Ka  0.0 0.0 0.0
+Kd  0.1 0.1 0.1
+Ks  0.3 0.3 0.3
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl metal
+Ka  0.0 0.0 0.0
+Kd  0.6 0.6 0.6
+Ks  0.3 0.3 0.3
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl 04_-_Default
+Ka  0.0 0.0 0.0
+Kd  0.8 0.8 0.8
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl red
+Ka  0.0 0.0 0.0
+Kd  0.6 0.1 0.1
+Ks  0.0 0.0 0.0
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl glass
+Ka  0.0 0.0 0.0
+Kd  0.5 0.5 0.5
+Ks  0.2 0.2 0.2
+d  0.6
+Ns  10.0
+illum 2
+#
+newmtl metal
+Ka  0.0 0.0 0.0
+Kd  0.1 0.1 0.1
+Ks  0.8 0.8 0.8
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl aluminium_03
+Ka  0.0 0.0 0.0
+Kd  0.5 0.5 0.5
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  10.0
+illum 2
+#
+# Multi/Sub Material__129 done 
+#
+newmtl aluminium_03
+Ka  0.0 0.0 0.0
+Kd  0.5 0.5 0.5
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  10.0
+illum 2
+#
+newmtl metal_anisotropy_x_01
+Ka  0.0 0.0 0.0
+Kd  0.3 0.3 0.3
+Ks  1.0 1.0 1.0
+d  1.0
+Ns  10.0
+illum 2
+#
+# EOF

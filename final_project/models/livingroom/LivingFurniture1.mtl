@@ -1,0 +1,30 @@
+# Blender MTL File: 'None'
+# Material Count: 3
+
+newmtl Legno
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd ../../images/textures/bathroom/wood_18_diffuse.jpg
+
+newmtl Vaso
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.362277 0.676161
+Ks 0.169492 0.169492 0.169492
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl VrayAdvancedMat
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.609017 0.609017 0.609017
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1

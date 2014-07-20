@@ -1,0 +1,21 @@
+# Blender MTL File: 'Bedroom1Cabinet.blend'
+# Material Count: 2
+
+newmtl 1_-_Default
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.683721 0.576704
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd ../../images/textures/bathroom/wood_18_diffuse.jpg
+
+newmtl 2_-_Default
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.449020 0.449020 0.449020
+Ni 1.000000
+d 1.000000
+illum 2

@@ -1,0 +1,32 @@
+# Blender MTL File: 'Bookcase.blend'
+# Material Count: 3
+
+newmtl Glass
+Ns 7.843137
+Ka 0.000000 0.000000 0.000000
+Kd 0.160000 0.240000 0.240000
+Ks 1.000000 1.000000 1.000000
+Ni 1.000000
+d 0.233333
+illum 2
+map_Kd ../../images/textures/bathroom/wood_18_diffuse.jpg
+
+newmtl Wood
+Ns 7.843137
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd ../../images/textures/bathroom/wood_18_diffuse.jpg
+
+newmtl potolok-natazzno
+Ns 7.843137
+Ka 0.000000 0.000000 0.000000
+Kd 0.080000 0.080000 0.080000
+Ks 0.900000 0.900000 0.900000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd ../../images/textures/bathroom/wood_18_diffuse.jpg

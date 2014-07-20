@@ -1,0 +1,81 @@
+# Blender MTL File: 'BathroomCabinet.blend'
+# Material Count: 8
+
+newmtl Ceramiks
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.762353 0.781177 0.800000
+Ks 0.043137 0.043137 0.043137
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd ../../images/textures/bathroom/CeramicTexture.jpg
+
+newmtl Ceramiks_NONE
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.762353 0.781177 0.800000
+Ks 0.043137 0.043137 0.043137
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd ../../images/textures/bathroom/CeramicTexture.jpg
+
+newmtl Croco_Black_Skin
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.784314 0.699608
+Ks 0.043137 0.043137 0.043137
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd ../../images/textures/bathroom/Marble 400 x 400 px emperador.jpg
+
+newmtl Material_#27
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.194510 0.194510 0.194510
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd ../../images/textures/bathroom/tekst ruch.jpg
+
+newmtl Material_#28
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.185098 0.185098 0.185098
+Ks 0.449020 0.449020 0.449020
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd ../../images/textures/bathroom/tekst ruch.jpg
+
+newmtl Wood
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.498039 0.498039 0.498039
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd ../../images/textures/bathroom/wood_18_diffuse.jpg
+
+newmtl Wood_NONE
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.498039 0.498039 0.498039
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd ../../images/textures/bathroom/wood_18_diffuse.jpg
+
+newmtl chrome_go
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.276078 0.203922 0.050196
+Ks 0.039216 0.039216 0.039216
+Ni 1.000000
+d 1.000000
+illum 2

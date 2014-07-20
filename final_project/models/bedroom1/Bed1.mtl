@@ -1,0 +1,40 @@
+# Blender MTL File: 'Bed1.blend'
+# Material Count: 4
+
+newmtl md012a
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.449020 0.449020 0.449020
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl md012a#19
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.514510 0.533333 0.395294
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd ../../images/textures/bedroom1/TextureBed1.JPG
+
+newmtl md012as
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.498824 0.404706 0.153725
+Ks 0.134706 0.134706 0.134706
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl md0e12a
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.567843 0.558431 0.417255
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd ../../images/textures/bedroom1/TextureBed1.JPG

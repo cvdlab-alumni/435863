@@ -1,0 +1,131 @@
+<html>
+  <head> 
+    <title>Final Project - Danilo Salvati</title> 
+    <style>
+    body{
+    margin: 0;
+    overflow: hidden;
+    }
+
+    #blocker {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      display: none;
+    }
+
+    #instructions {
+      width: 100%;
+      height: 100%;
+
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+
+      -webkit-box-orient: horizontal;
+      -moz-box-orient: horizontal;
+      box-orient: horizontal;
+
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+      box-pack: center;
+
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      box-align: center;
+
+      color: #ffffff;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    #pointer {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      margin-top: -20px;
+      margin-left: -20px;
+      width: 40px;
+      height: 40px;
+      display: none;
+      background-image: url("images/textures/Pointer.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+
+
+    #stats {  /* Align stats top-left */
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    }
+
+    </style> 
+  </head>
+  <body>
+    <div id="pointer"></div>
+
+     <div id="blocker">
+
+      <div id="instructions">
+        <span style="font-size:40px">Click to navigate</span>
+        <br />
+        (W, A, S, D = Move, SPACE = Jump, MOUSE = Look around)
+      </div>
+
+    </div>
+
+    <!-- JavaScript libraries -->
+    <script type="text/javascript" src="scripts/dependencies/jquery.min.js"></script> 
+    <script type="text/javascript" src="scripts/dependencies/three.min.js"></script>
+    <script type="text/javascript" src="scripts/dependencies/Stats.min.js"></script>
+    <script type="text/javascript" src="scripts/dependencies/dat.gui.min.js"></script>
+    <script type="text/javascript" src="scripts/dependencies/TrackballControls.js"></script>
+    <script type="text/javascript" src="scripts/dependencies/OBJLoader.js"></script>
+    <script type="text/javascript" src="scripts/dependencies/MTLLoader.js"></script> 
+    <script type="text/javascript" src="scripts/dependencies/OBJMTLLoader.js"></script>
+    <script type="text/javascript" src="scripts/dependencies/PointerLockControls.js"></script>
+    <script type="text/javascript" src="scripts/dependencies/tween.min.js"></script>
+    <script type="text/javascript" src="scripts/dependencies/CSS3DRenderer.js"></script>
+    <script type="text/javascript" src="scripts/dependencies/threex.daynight.js"></script>
+    <script type="text/javascript" src="scripts/dependencies/water-material.js"></script>
+
+
+
+    <!-- Librerie del progetto --> 
+    <script type="text/javascript" src="scripts/project_libs/gui.js"></script>
+    <script type="text/javascript" src="scripts/project_libs/objectLoader.js"></script>
+    <script type="text/javascript" src="scripts/project_libs/PLNavigation.js"></script>
+    <script type="text/javascript" src="scripts/project_libs/objectPicking.js"></script>
+    <script type="text/javascript" src="scripts/project_libs/house/house.js"></script>
+    <script type="text/javascript" src="scripts/project_libs/house/lights.js"></script>
+    <script type="text/javascript" src="scripts/project_libs/house/door.js"></script>
+    <script type="text/javascript" src="scripts/project_libs/house/window.js"></script>
+    <script type="text/javascript" src="scripts/project_libs/house/roof.js"></script>
+    <script type="text/javascript" src="scripts/project_libs/house/bathroom.js"></script>
+    <script type="text/javascript" src="scripts/project_libs/house/kitchen.js"></script>
+    <script type="text/javascript" src="scripts/project_libs/house/livingroom.js"></script>
+    <script type="text/javascript" src="scripts/project_libs/house/bedroom1.js"></script>
+    <script type="text/javascript" src="scripts/project_libs/house/bedroom2.js"></script>
+    <script type="text/javascript" src="scripts/project_libs/outdoor.js"></script>
+    <script type="text/javascript" src="scripts/project_libs/water.js"></script>
+    <script type="text/javascript" src="scripts/project_libs/motionDetection.js"></script>
+    <script type="text/javascript" src="scripts/project_libs/sounds.js"></script>
+
+    <!-- Script iniziale che costruisce l'intera pagina web -->
+    <script type="text/javascript" src="scripts/project_libs/index.js"></script>
+
+    <video id="video" src="videos/Big_Buck_Bunny_small.ogv" controls="false" autoplay="false"></video>
+
+    <!-- Serie di elementi per il motion detection -->
+    <video id="monitor" autoplay style="display:none; width: 320px; height: 240px;"></video>
+    <div id="canvasLayers" style="position: relative; width:320px; height:240px; float:left">
+      <canvas id="videoCanvas" width="320" height="240" style="z-index: 1; position: absolute; left:0px; top:0px; opacity:0.5;"></canvas>
+      <canvas id="layer2" width="320" height="240" style="z-index: 2; position: absolute; left:0px; top:0px; opacity:0.5;"></canvas>
+    </div>
+    <canvas id="blendCanvas" style="display: none; position: relative; left: 0px; top: 240px; width: 320px; height: 240px;"></canvas>
+
+  </body>
+</html>
