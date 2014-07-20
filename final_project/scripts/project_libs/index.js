@@ -232,6 +232,18 @@ $(function () {
   var onDocumentMouseDownTrackball = initPickingTrackball(camera,projector,toIntersect);
   document.addEventListener('mousedown', onDocumentMouseDownTrackball, false);
 
+  /* Creo l'array degli oggetti di cui voglio verificare le collisioni (in pratica prendo la casa tranne il pavimento) */
+  var collisionArray = [house.children[0],
+                        house.children[2],
+                        house.children[3],
+                        house.children[4],
+                        house.children[5],
+                        house.children[6],
+                        house.children[7],
+                        house.children[8],
+                        house.children[9],
+                        ]
+
 
   /*****************************************************************************/
   /********************************** RENDERING ********************************/
@@ -266,7 +278,7 @@ $(function () {
       unlockAllDirection(controls); // Sblocco il movimento in tutte le direzioni
 
       /* Verifico la collisione solo per i muri, le finestre e le porte */
-      if(collision(controls,[house])) {
+      if(collision(controls,collisionArray)) {
         lockDirection(controls);
       }
 

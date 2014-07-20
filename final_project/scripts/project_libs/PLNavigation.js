@@ -99,9 +99,15 @@ function collision(controls, collisionArray) {
 		cameraDirection.applyMatrix4(rotationMatrix);
 	}
 	var rayCaster = new THREE.Raycaster(controls.getObject().position, cameraDirection.normalize());	
-	var intersects = rayCaster.intersectObjects(collisionArray, true);	
+	var intersects = rayCaster.intersectObjects(collisionArray, true);
+
+	/* Controllo anche le collisioni con gli oggetti posti più in basso */
+	var position = controls.getObject().position;
+	position.y = 3;
+	var rayCaster2 = new THREE.Raycaster(position, cameraDirection.normalize());	
+	var intersects2 = rayCaster2.intersectObjects(collisionArray, true);
 	
-	if ((intersects.length > 0 && intersects[0].distance < 10)) {
+	if ((intersects.length > 0 && intersects[0].distance < 10) || (intersects2.length > 0 && intersects2[0].distance < 10)) {
 		return true;
 	}
 
